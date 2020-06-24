@@ -1,4 +1,4 @@
-package com.hugh.hughstagram_practice
+package com.hugh.instagram_clone_ver_02
 
 import org.junit.Test
 

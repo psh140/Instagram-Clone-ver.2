@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "Hughstagram_Practice"
+rootProject.name = "Instagram_Clone_Ver_02"
