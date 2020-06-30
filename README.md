@@ -11,4 +11,10 @@ Initiation and Bottom Navigation View Add
 
 30.06.2020  
 Fragments Add  
-초기 Fragments 추가 
+초기 Fragments 추가  
+
+Fragment Replace Update  
+Fragment 화면전환 수정  
+
+Profile Fragment Add  
+계정생성 Fragment 추가  
