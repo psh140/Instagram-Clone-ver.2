@@ -22,34 +22,29 @@ class MainActivity : AppCompatActivity() {
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.nav_home -> {
-//                moveToFragment(HomeFragment())
-                selectedFragment = HomeFragment()
+                moveToFragment(HomeFragment())
+                return@OnNavigationItemSelectedListener true
             }
             R.id.nav_search -> {
-//                moveToFragment(SearchFragment())
-                selectedFragment = SearchFragment()
+                moveToFragment(SearchFragment())
+                return@OnNavigationItemSelectedListener true
             }
             R.id.nav_add_post -> {
 
                 return@OnNavigationItemSelectedListener true
             }
             R.id.nav_notifications -> {
-//                moveToFragment(NotificationsFragment())
-
-                selectedFragment = NotificationsFragment()
+                moveToFragment(NotificationsFragment())
+                return@OnNavigationItemSelectedListener true
             }
             R.id.nav_profile -> {
-//                moveToFragment(ProfileFragment())
-
-                selectedFragment = ProfileFragment()
+                moveToFragment(ProfileFragment())
+                return@OnNavigationItemSelectedListener true
             }
         }
 
         if(selectedFragment != null) {
-            supportFragmentManager.beginTransaction().replace(
-                R.id.fragment_container,
-                selectedFragment!!
-            ).commit()
+
         }
         false
     }
@@ -62,19 +57,14 @@ class MainActivity : AppCompatActivity() {
 
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
 
-        supportFragmentManager.beginTransaction().replace(
-            R.id.fragment_container,
-            HomeFragment()
-        ).commit()
-//        moveToFragment(HomeFragment())
-
+        moveToFragment(HomeFragment())
     }
 
 
-//    private fun moveToFragment(fragment: Fragment)
-//    {
-//        val fragmentTrans = supportFragmentManager.beginTransaction()
-//        fragmentTrans.replace(R.id.fragment_container, fragment)
-//        fragmentTrans.commit()
-//    }
+    private fun moveToFragment(fragment: Fragment)
+    {
+        val fragmentTrans = supportFragmentManager.beginTransaction()
+        fragmentTrans.replace(R.id.fragment_container, fragment)
+        fragmentTrans.commit()
+    }
 }
