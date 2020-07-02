@@ -18,3 +18,7 @@ Fragment 화면전환 수정
 
 Profile Fragment Add  
 계정생성 Fragment 추가  
+
+02.07.2020  
+Login Function Add  
+로그인 기능, 자동 로그인 기능 추가  
